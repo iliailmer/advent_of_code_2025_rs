@@ -1,15 +1,4 @@
-use std::{
-    fs::File,
-    io::{Error, Read},
-    ops::Rem,
-};
-pub fn read_input_file(file_path: String) -> Result<String, Error> {
-    // read a file
-    let mut file: File = File::open(file_path)?;
-    let mut puzzle: String = String::new();
-    file.read_to_string(&mut puzzle)?;
-    Ok(puzzle)
-}
+use std::ops::Rem;
 pub fn part_1(input: &str) -> i32 {
     let mut result = 0;
     let mut dial = 50;
